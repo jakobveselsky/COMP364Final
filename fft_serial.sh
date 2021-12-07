@@ -1,12 +1,12 @@
 #! /bin/bash
 #
-gcc -c -Wall fft_serial.c
+g++ -c -Wall -I/$HOME/include fft_serial.cpp
 if [ $? -ne 0 ]; then
-  echo "Compile error."
+  echo "Compile error"
   exit
 fi
 #
-gcc fft_serial.o -lm
+g++ fft_serial.o -lm
 if [ $? -ne 0 ]; then
   echo "Load error."
   exit
@@ -14,7 +14,6 @@ fi
 #
 rm fft_serial.o
 #
-chmod ugo+x a.out
-mv a.out ~/binc/fft_serial
+mv a.out $HOME/bincpp/fft_serial
 #
 echo "Normal end of execution."
