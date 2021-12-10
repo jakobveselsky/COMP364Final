@@ -1,2 +1,7 @@
 #Ignore vscode folder
 .vscode
+
+# Get rid of what the Makefile takes care of
+*.exe
+*.o
+*.d

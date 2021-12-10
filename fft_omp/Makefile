@@ -3,7 +3,7 @@ COMMON	= ../common
 DBG      ?= -g
 CXX	 ?= g++
 MPICXX   ?= mpicxx
-CXXFLAGS  = -O3 -std=c++11 -I. -I$(COMMON) $(DBG)
+CXXFLAGS  = -O3 -fopenmp -std=c++11 -I. -I$(COMMON) $(DBG)
 
 EXEC = fft_omp
 
@@ -18,7 +18,7 @@ DEPS = $(OBJS:.o=.d)
 include $(COMMON)/Makefile.common
 LDFLAGS	= $(COMMON_LIBS)
 
-fft_omp: fft_serial.cpp $(COMMON_OBJS)
+fft_omp: fft_omp.cpp $(COMMON_OBJS)
 	$(CXX) $(CXXFLAGS) -o fft_omp $^ $(LDFLAGS)
 
 clean: clean_common
