@@ -95,7 +95,7 @@ int main ( void )
   cout << "\n";
 
   seed  = 331.0;
-  n = 8388608;
+  n = 1048576;
 //
 //  LN2 is the log base 2 of N.  Each increase of LN2 doubles N.
 //
