@@ -61,9 +61,10 @@ int main ( )
   int icase;
   int it;
   int ln2;
+  int ln2_max = 5;
   double mflops;
   int n;
-  int nits = 10000;
+  int nits = 1;
   static double seed;
   double sgn;
   double *w;
@@ -92,11 +93,11 @@ int main ( )
   cout << "\n";
 
   seed  = 331.0;
-  n = 1;
+  n = 524288;
 //
 //  LN2 is the log base 2 of N.  Each increase of LN2 doubles N.
 //
-  for ( ln2 = 1; ln2 <= 20; ln2++ )
+  for ( ln2 = 1; ln2 <= ln2_max; ln2++ )
   {
     n = 2 * n;
 //
