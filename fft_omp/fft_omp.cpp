@@ -60,7 +60,7 @@ int main ( void )
   int ln2_max = 5;
   double mflops;
   int n;
-  int nits = 10000;
+  int nits = 10;
   static double seed;
   double sgn;
   double *w;
